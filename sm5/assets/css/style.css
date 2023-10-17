@@ -1,0 +1,204 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.accordion_wrapper{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+body{
+    background: #dadada;
+    font-size: 18px;
+    color: #111;
+    font-family: 'EB Garamond', serif;
+}
+
+header{
+    padding: 30px;
+    border-bottom: 1px solid rgb(63, 88, 134);
+}
+
+.logo{
+    color: rgb(70, 70, 180);
+    font-weight: bold;
+    font-size: 36px;
+}
+
+.header_wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header_btns{
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.btn{
+    color:  rgb(63, 88, 134);
+    font-weight: bold;
+    font-size: 17px;
+}
+
+nav{
+    display: flex;
+    gap: 50px;
+}
+
+.header_link{
+    color: rgb(63, 88, 134);
+    font-weight: 600;
+}
+
+.header_btns > p{
+    color: rgb(63, 88, 134);
+    font-size: 20px;
+}
+
+.accordion_header{
+    cursor: pointer;
+    color: white;
+    background-color: rgb(63, 63, 107);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.accordion_content{
+    
+    display: flex;
+    gap: 100px;
+    align-items: start;
+    justify-content: center;
+}
+
+.photo{
+    border-radius: 10px;
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+}
+
+.accordion_body{
+    color: #111;
+    border: 1px solid grey;
+    padding: 20px;
+    border-top: none;
+    border-radius: 0 0 10px 10px;
+    display: none;
+    
+}
+
+.title{
+    padding-top: 60px;
+    font-size: 26px;
+    color: rgb(63, 88, 134);
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.accordion_body_active{
+    display: block;
+    animation: show.3s ease-in-out;
+
+}
+@keyframes show {
+    from{
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.img_active{
+    transition: all ease-in-out 0.9s;
+    transform: rotate(45deg);
+}
+
+.content{
+    padding: 80px 0px;
+}
+
+.tab_header{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    color: white;
+}
+.tab_header_button{
+    padding: 10px;
+    background-color:rgb(63, 63, 107);
+    cursor: pointer;
+    font-weight: bold;
+}
+.tab_body{
+    padding: 10px;
+    border: 1px solid rgb(63, 63, 107);
+    display: none;
+   
+}
+.tab_body_active{
+    display: block;
+}
+
+/* отложенный звонок */
+.phone{
+    position: fixed;
+    right:100px ;
+    top: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.time-block{
+    font-size: 20px;
+    color: white;
+    width: 220px;
+    padding: 30px;
+    border-radius: 10px;
+    background: rgb(63, 63, 107);
+    display: none;
+
+}
+.time-button{
+    padding: 10px;
+    background: none;
+    border: 2px solid rgb(63, 63, 107);
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    color:  rgb(63, 63, 107);
+    font-family: 'EB Garamond', serif;
+    display: none;
+}
+.time-block.active{
+    display: block;
+}
+
+.time-button.active{
+    display: block;
+}
+.time-block .count{
+    text-align: right;
+    font-size: 16px;
+    font-weight: 500;
+}
